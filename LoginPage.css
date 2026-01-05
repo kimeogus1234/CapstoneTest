@@ -1,0 +1,101 @@
+/* src/pages/LoginPage.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* 헤더 높이를 제외한 전체 높이 */
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px; /* 폼의 최대 너비 */
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #a97af1; /* 포커스 시 테두리 색상 */
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #a97af1; /* 메인 테마 색상 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #8c5de0;
+}
+
+/* --- 👇 이 아래 부분이 수정/추가되었습니다 --- */
+
+/* '아이디/비밀번호 찾기' 버튼 그룹 */
+.form-footer-buttons {
+  text-align: center; /* 버튼들을 중앙 정렬 */
+  margin-top: 1rem;
+  padding-bottom: 1rem; /* 회원가입 링크와의 간격 */
+  border-bottom: 1px solid #eee; /* 구분선 추가 */
+}
+
+/* '아이디/비밀번호 찾기' 버튼 개별 스타일 */
+.sub-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #777;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.sub-button:hover {
+  color: #a97af1;
+  text-decoration: underline;
+}
+
+/* 두 버튼 사이에 구분선 '|' 추가 */
+.sub-button:first-of-type::after {
+  content: '|';
+  margin: 0 12px;
+  color: #ccc;
+}
