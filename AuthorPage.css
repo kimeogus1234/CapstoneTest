@@ -1,0 +1,132 @@
+/* src/pages/AuthorPage.css */
+
+.profile-edit-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 2.5rem;
+}
+.profile-tabs button {
+  background: none; border: none; padding: 1rem 1.5rem; font-size: 1.1rem;
+  font-weight: 500; color: #888; cursor: pointer;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  transition: color 0.2s, border-bottom-color 0.2s;
+}
+.profile-tabs button:hover { color: #a97af1; }
+.profile-tabs button.active { color: #a97af1; font-weight: 700; border-bottom-color: #a97af1; }
+
+.tab-content .submit-button {
+  width: auto;
+  min-width: 150px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.novel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.novel-card {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.novel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.novel-image {
+  flex-shrink: 0;
+  width: 80px;
+  height: 112px;
+}
+.novel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.no-image {
+  width: 100%; height: 100%; background-color: #e9ecef;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: #888; border-radius: 4px;
+}
+
+.novel-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* --- 👇 이 부분이 최종 수정된 코드입니다 --- */
+.novel-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5; /* 줄 간격 추가 */
+
+  /* 여러 줄 말줄임 처리를 위한 표준 방식 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  /* 비표준이지만 대부분의 브라우저에서 작동하는 방식 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 보여줄 줄 수 */
+  -webkit-box-orient: vertical;
+  
+  /* 높이를 직접 지정하여 강제로 두 줄을 만듭니다. (대체 방안) */
+  /* max-height: 2.7em; */ /* (0.9rem * 1.5 * 2) */
+}
+/* ------------------------------------------- */
+
+
+.subscription-status-card {
+  background-color: #f9f9fa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.status-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  font-size: 1rem;
+}
+.status-label {
+  font-weight: 600;
+  color: #555;
+}
+.status-value.active {
+  color: #28a745;
+  font-weight: bold;
+}
+.status-value.inactive {
+  color: #888;
+}

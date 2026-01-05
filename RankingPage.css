@@ -1,0 +1,90 @@
+/* src/pages/RankingPage.css */
+
+.ranking-page-container {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ranking-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 2.5rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-button.active {
+  color: #a97af1;
+  font-weight: 700;
+  border-bottom-color: #a97af1;
+}
+
+.ranking-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* --- 👇 이 아래 부분이 최종 수정된 장르/태그 스타일입니다 --- */
+
+.tag-search-section {
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tag-item {
+  /* 버튼 기본 스타일 초기화 */
+  background: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  
+  /* 디자인 스타일 */
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.tag-item:hover {
+  background-color: #f1f3f5;
+  border-color: #ccc;
+}
+
+/* 활성화된 태그 스타일 (모든 버튼 공통) */
+.tag-item.active {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+  font-weight: 700;
+}

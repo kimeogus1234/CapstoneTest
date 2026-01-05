@@ -1,0 +1,136 @@
+/* src/pages/NovelCreatePage.css */
+.novel-create-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.page-title { text-align: center; margin-bottom: 0.5rem; font-size: 2.2rem; color: #333; }
+.page-subtitle { text-align: center; margin-bottom: 2.5rem; color: #888; }
+
+.novel-create-form .form-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+}
+.form-column { display: flex; flex-direction: column; gap: 2rem; }
+.form-row { display: flex; gap: 1rem; }
+.input-group.half { width: 50%; }
+
+.input-group label, .input-group legend {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+}
+.input-group input, .input-group textarea, .input-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+.input-group textarea { resize: vertical; min-height: 120px; }
+.input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+  outline: none;
+  border-color: #a97af1;
+  box-shadow: 0 0 0 2px rgba(169, 122, 241, 0.2);
+}
+.input-group select {
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right .7em top 50%;
+  background-size: .65em auto;
+}
+.image-preview-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.image-preview-box img { width: 100%; height: 100%; object-fit: cover; }
+fieldset { border: none; padding: 0; }
+.checkbox-group { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+.checkbox-group label { display: flex; align-items: center; gap: 0.3rem; font-weight: normal; font-size: 0.95rem; }
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+.btn-primary, .btn-secondary {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-primary { background-color: #a97af1; color: white; }
+.btn-primary:disabled { background-color: #ccc; }
+.btn-secondary { background-color: #6c757d; color: white; }
+
+/* --- 👇 모바일 반응형 스타일 (화면 너비가 992px 이하일 때 적용) --- */
+@media (max-width: 992px) {
+  .novel-create-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  /* 2단 그리드를 1단으로 변경 */
+  .novel-create-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  /* 2개로 나뉘어 있던 입력창 행을 세로로 쌓음 */
+  .form-row {
+    flex-direction: column;
+    gap: 2rem; /* 세로 간격으로 변경 */
+  }
+
+  /* 너비가 절반이었던 입력 그룹을 100%로 변경 */
+  .input-group.half {
+    width: 100%;
+  }
+
+  /* 모바일에서 하단 버튼 중앙 정렬 */
+  .form-actions {
+    justify-content: center;
+  }
+}
+.image-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}

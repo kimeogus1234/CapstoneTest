@@ -1,0 +1,120 @@
+/* AuthorVerificationPage.css */
+
+.verification-container {
+  width: 90%;            /* 화면 폭의 90% 사용 */
+  max-width: 800px;      /* 최대 600px */
+  min-width: 320px;      /* 최소 320px */
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.verification-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.message {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.message.success {
+  background-color: #e0f7e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.message.error {
+  background-color: #fde0e0;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.phone-input-group,
+.code-input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.phone-input-group input,
+.code-input-group input {
+  width: 150px; /* 기존 70px → 80px */
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+
+.phone-input-group input:focus,
+.code-input-group input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.phone-input-group input[disabled] {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.phone-input-group button,
+.code-input-group button {
+  padding: 8px 15px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.phone-input-group button:disabled,
+.code-input-group button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.phone-input-group button:hover:not(:disabled),
+.code-input-group button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+#recaptcha-container {
+  margin-top: 20px;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .phone-input-group input,
+  .code-input-group input {
+    width: 60px;
+    font-size: 14px;
+  }
+
+  .phone-input-group button,
+  .code-input-group button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .verification-container {
+    padding: 20px;
+    margin: 20px;
+  }
+}
